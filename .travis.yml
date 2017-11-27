@@ -1,0 +1,21 @@
+language: python
+python:
+  - "2.7"
+  - "3.4"
+  - "3.5"
+  - "3.6"
+  - "nightly"
+os: osx
+install:
+  - pip install -r requirements.txt
+  - python setup.py bdist_wheel
+script:
+  - pytest
+deploy:
+  provider: pypi
+  user: jeppe742
+  password: Surejens11
+  distributions: sdist bdist_wheel
+notifications:
+  email: false
+
