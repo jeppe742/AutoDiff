@@ -6,7 +6,7 @@ import numpy as np
 setup(
     name = 'autodiff',
 
-    version = "0.9.2",
+    version = "1.0.0",
 
     long_description = "A framework for doing automatical differentiation",
     url = "https://github.com/jeppe742/AutoDiff",
