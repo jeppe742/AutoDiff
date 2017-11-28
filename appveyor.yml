@@ -58,12 +58,12 @@ after_test:
 artifacts:
   - path: dist\*
 
-# on_success:
-#   - echo [distutils] > %USERPROFILE%\\.pypirc
-#   - echo index-servers = >> %USERPROFILE%\\.pypirc
-#   - echo     pypi >> %USERPROFILE%\\.pypirc
-#   - echo [pypi] >> %USERPROFILE%\\.pypirc
-#   - echo username=jeppe742 >> %USERPROFILE%\\.pypirc
-#   - echo password=%PYPIPASSWORD% >> %USERPROFILE%\\.pypirc
-#   - set HOME=%USERPROFILE%
-#   - "%PYTHON%\\python.exe setup.py bdist_wheel upload && exit 0"
+on_success:
+  - echo [distutils] > %USERPROFILE%\\.pypirc
+  - echo index-servers = >> %USERPROFILE%\\.pypirc
+  - echo     pypi >> %USERPROFILE%\\.pypirc
+  - echo [pypi] >> %USERPROFILE%\\.pypirc
+  - echo username=jeppe742 >> %USERPROFILE%\\.pypirc
+  - echo password=%PYPIPASSWORD% >> %USERPROFILE%\\.pypirc
+  - set HOME=%USERPROFILE%
+  - "%PYTHON%\\python.exe setup.py bdist_wheel upload && exit 0"
